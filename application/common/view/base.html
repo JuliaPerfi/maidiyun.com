@@ -19,7 +19,16 @@
 
     </div>
     {include file='common@footer'}
-    {block name='script'}{/block}
+    
+<script src='__JS__/jquery-1.11.2.min.js'></script>
+<script src='__JS__/common.js'></script>
+<script src='__JS__/QRCode.js'></script>
+<script>
+var qrcode = new QRCode(document.getElementById("qrcode"), { width : 60, height : 60 });
+var QRCodeUrl = '恭喜发财' ;
+qrcode.makeCode(QRCodeUrl);
+</script>
+{block name='script'}{/block}
 </body>
 
 </html>
