@@ -1,0 +1,4 @@
+<?php
+//000000000000
+ exit();?>
+think_serialize:a:2:{i:0;a:19:{s:8:"IsDealer";i:0;s:11:"DealerPrice";i:0;s:6:"ProdID";s:12:"180604000002";s:8:"ProdName";s:27:"非对称性粒子加速器";s:11:"PromoteName";s:0:"";s:9:"ProdBrief";s:0:"";s:8:"DownNums";i:0;s:5:"CPath";s:6:"2_3667";s:11:"CollectNums";i:0;s:9:"ShareNums";i:0;s:8:"LoveNums";i:0;s:11:"CommentNums";i:0;s:5:"Views";i:10;s:5:"IsNew";s:1:"3";s:5:"Sales";i:0;s:5:"HasMX";s:1:"0";s:8:"MaxPrice";i:1200;s:8:"MinPrice";i:0;s:5:"Price";N;}i:1;a:19:{s:8:"IsDealer";i:0;s:11:"DealerPrice";i:0;s:6:"ProdID";s:12:"151112100004";s:8:"ProdName";s:30:"小型简便式激光打标机";s:11:"PromoteName";s:30:"小型简便式激光打标机";s:9:"ProdBrief";s:0:"";s:8:"DownNums";i:0;s:5:"CPath";s:20:"2_3878_3883_128_4430";s:11:"CollectNums";i:5;s:9:"ShareNums";i:0;s:8:"LoveNums";i:0;s:11:"CommentNums";i:11;s:5:"Views";i:422;s:5:"IsNew";s:1:"1";s:5:"Sales";i:0;s:5:"HasMX";s:1:"0";s:8:"MaxPrice";i:32000;s:8:"MinPrice";i:31800;s:5:"Price";i:4200000;}}

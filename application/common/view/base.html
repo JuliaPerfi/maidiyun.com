@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{$website.website_title|default='迈迪网'}</title>
+<meta name="keywords" content="{$website.website_keywords|default='迈迪网'}" />
+<meta name="description" content="{$website.website_content|default='迈迪网'}" />
+<link rel="Shortcut Icon" href="mdsoft.ico">
+<base href="#" />
+<link rel="stylesheet" type="text/css" href="__CSS__/common.css" />
+<link rel="stylesheet" type="text/css" href="__CSS__/reset.css" />
+{block name='style'}{/block}
+</head>
+
+<body>
+     {include file='common@login'}
+     {include file='common@header'}
+    <div class='main-body'>
+        {block name='body'}{/block}
+
+    </div>
+    {include file='common@footer'}
+    {block name='script'}{/block}
+</body>
+
+</html>

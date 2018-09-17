@@ -1,0 +1,38 @@
+
+
+
+<div class='header-nav'>
+    <div class=' header-nav-bd'>
+
+        <div class=' header-nav-bd-comp'>
+            <div class='comp-left'>
+                <div>
+                    <img src="__IMG__/{$company_info.company_logo}" alt="logo"/>
+                    <img src="__IMG__/logo.png" alt="二维码">
+                </div>
+                <div style="padding-left: 8px;">
+                    <span class='company-name'>{$company_info.company_name}</span>
+                    <span class='company-tel'><i></i>联系电话：{$company_info.company_tel}</span>
+                </div>
+            </div>
+            <div class="comp-right">
+                
+                <p style="font-size:15px;">
+                    <a class="resource" onclick="" href="javascript:void(0)"><i></i><span>加为资源</span></a>
+                    <a class="linkup" onclick="" href="#"><i></i><span>在线沟通</span></a></a>
+                </p>
+            </div>
+        </div>
+        <div class=' header-nav-bd-menu'>
+            <ul class="clearfix">
+                <li {eq name='CONTROLLER' value='index'}class='active'{/eq} ><a href="/index.html">首页</a></li>
+                <li {eq name='CONTROLLER' value='category'}class='active'{/eq}><a href="/category.html">产品中心</a></li>
+                <li {eq name='CONTROLLER' value='produce'}class='active'{/eq}><a href="/produce.html">生产能力</a></li>
+                <li {eq name='CONTROLLER' value='quali'}class='active'{/eq}><a href="/quali.html">企业资质</a></li>
+                <li {eq name='CONTROLLER' value='news'}class='active'{/eq}><a href="/news.html">新闻动态</a></li>
+                <li class="last {eq name='CONTROLLER' value='about'}active{/eq}"><a href="/about.html">企业介绍</a></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
