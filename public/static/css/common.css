@@ -16,8 +16,6 @@ body{
     height: auto !important; 
     position: relative;
     display:block;
-    padding-bottom:25px;
-
 }
 .login-nav{
     width: 100%;
