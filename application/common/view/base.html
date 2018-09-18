@@ -24,9 +24,10 @@
 <script src='__JS__/common.js'></script>
 <script src='__JS__/QRCode.js'></script>
 <script>
-var qrcode = new QRCode(document.getElementById("qrcode"), { width : 60, height : 60 });
-var QRCodeUrl = '恭喜发财' ;
-qrcode.makeCode(QRCodeUrl);
+    //生成二维码
+    var qrcode = new QRCode(document.getElementById("qrcode"), { width : 67, height : 67 });
+    var QRCodeUrl = '恭喜发财' ;
+    qrcode.makeCode(QRCodeUrl);
 </script>
 {block name='script'}{/block}
 </body>

@@ -1,11 +1,278 @@
 {extend name='common@base'}
-{block name='body'}
-        <div >
-            <p>
-                当前迈迪通号 {$MDT}
-            </p>
 
-            index
+{block name='style'}
+<link rel="stylesheet" href="__JS__/swiper/swiper-4.4.1.min.css">
+<link rel="stylesheet" type="text/css" href="__CSS__/index.css" />
+{/block}
+{block name='body'}
+
+<!-- banner轮播图 -->
+<div class="banner_swiper">
+            <div id='banner_swiper' class="swiper-container">
+                <ul  class="swiper-wrapper">
+                        <li class="swiper-slide">
+                                <a href="" target="_blank">
+                                    <img src="__IMG__/banner.png"" alt="" >
+                                </a>
+                        </li>
+                        <li class="swiper-slide">
+                                <a href="" target="_blank">
+                                    <img src="__IMG__/banner.png"" alt="" >
+                                </a>
+                        </li>
+                        <li class="swiper-slide">
+                                <a href="" target="_blank">
+                                    <img src="__IMG__/banner.png"" alt="" >
+                                </a>
+                        </li>
+                        <li class="swiper-slide">
+                                <a href="" target="_blank">
+                                    <img src="__IMG__/banner.png"" alt="" >
+                                </a>
+                        </li>
+                </ul>
+                <div class="swiper-pagination"></div>
+            </div>
          
+ </div>
+ <!-- 产品推荐 -->
+<div  class='product_info' >
+        <div class='product_top' >
+            <div class='top_left'>
+                <span class='top_left_title' >产品推荐</span><span class='top_left_eng' >/ PRODUCT CENTER</span>
+            </div>
+            <div class='top_right'>
+                    <a href=''> <span class='more'>查看更多</span></a>
+            </div>
         </div>
+        <div class='product_content'>
+            <ul>
+                <li>
+                    <div class='li_content' >
+                        <div class='li_top' >
+                            <img src="__IMG__/cp.png" alt="">
+                        </div>
+                        <div class='li_bottom'>
+                            <span>{:cutStr('BRCF 01系列 斜齿轮减速机轮减速机速机轮减速机速机轮减速机','20')}</span>
+                            <span class='view_count'><i></i>20次</span>
+                            <span class='download_count'><i></i>1000次</span>
+                        </div>
+                    </div>
+                </li>
+               <li>
+                    <div class='li_content' >
+                        <div class='li_top' >
+                            <img src="__IMG__/cp.png" alt="">
+                        </div>
+                        <div class='li_bottom'>
+                            <span>{:cutStr('BRCF 01系列 斜齿轮减速机轮减速机速机轮减速机速机轮减速机','20')}</span>
+                            <span class='view_count'><i></i>20次</span>
+                            <span class='download_count'><i></i>1000次</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class='li_content' >
+                        <div class='li_top' >
+                            <img src="__IMG__/cp.png" alt="">
+                        </div>
+                        <div class='li_bottom'>
+                            <span>{:cutStr('BRCF 01系列 斜齿轮减速机轮减速机速机轮减速机速机轮减速机','20')}</span>
+                            <span class='view_count'><i></i>20次</span>
+                            <span class='download_count'><i></i>1000次</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class='li_content' >
+                        <div class='li_top' >
+                            <img src="__IMG__/cp.png" alt="">
+                        </div>
+                        <div class='li_bottom'>
+                            <span>{:cutStr('BRCF 01系列 斜齿轮减速机轮减速机速机轮减速机速机轮减速机','20')}</span>
+                            <span class='view_count'><i></i>20次</span>
+                            <span class='download_count'><i></i>1000次</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class='li_content' >
+                        <div class='li_top' >
+                            <img src="__IMG__/cp.png" alt="">
+                        </div>
+                        <div class='li_bottom'>
+                            <span>{:cutStr('BRCF 01系列 斜齿轮减速机轮减速机速机轮减速机速机轮减速机','20')}</span>
+                            <span class='view_count'><i></i>20次</span>
+                            <span class='download_count'><i></i>1000次</span>
+                        </div>
+                    </div>
+                </li>
+                <li  class='last'>
+                    <div class='li_content' >
+                        <div class='li_top' >
+                            <img src="__IMG__/cp.png" alt="">
+                        </div>
+                        <div class='li_bottom'>
+                            <span>{:cutStr('BRCF 01系列 斜齿轮减速机轮减速机速机轮减速机速机轮减速机','20')}</span>
+                            <span class='view_count'><i></i>20次</span>
+                            <span class='download_count'><i></i>1000次</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class='li_content' >
+                        <div class='li_top' >
+                            <img src="__IMG__/cp.png" alt="">
+                        </div>
+                        <div class='li_bottom'>
+                            <span>{:cutStr('BRCF 01系列 斜齿轮减速机轮减速机速机轮减速机速机轮减速机','20')}</span>
+                            <span class='view_count'><i></i>20次</span>
+                            <span class='download_count'><i></i>1000次</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class='li_content' >
+                        <div class='li_top' >
+                            <img src="__IMG__/cp.png" alt="">
+                        </div>
+                        <div class='li_bottom'>
+                            <span>{:cutStr('BRCF 01系列 斜齿轮减速机轮减速机速机轮减速机速机轮减速机','20')}</span>
+                            <span class='view_count'><i></i>20次</span>
+                            <span class='download_count'><i></i>1000次</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class='li_content' >
+                        <div class='li_top' >
+                            <img src="__IMG__/cp.png" alt="">
+                        </div>
+                        <div class='li_bottom'>
+                            <span>{:cutStr('BRCF 01系列 斜齿轮减速机轮减速机速机轮减速机速机轮减速机','20')}</span>
+                            <span class='view_count'><i></i>20次</span>
+                            <span class='download_count'><i></i>1000次</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class='li_content' >
+                        <div class='li_top' >
+                            <img src="__IMG__/cp.png" alt="">
+                        </div>
+                        <div class='li_bottom'>
+                            <span>{:cutStr('BRCF 01系列 斜齿轮减速机轮减速机速机轮减速机速机轮减速机','20')}</span>
+                            <span class='view_count'><i></i>20次</span>
+                            <span class='download_count'><i></i>1000次</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+</div>
+<!-- 企业资质 -->
+<div class="quali_info">
+    <div class='quali_top' >
+        <div class='top_left'>
+            <span class='top_left_title' >企业资质/图册</span><span class='top_left_eng' >/ QUALICAFITION/PHOTO</span>
+        </div>
+        <div class='top_right'>
+            <a href=''><span class='more'>查看更多</span></a>
+        </div>
+    </div>
+    <div id='quali_swiper' class='quali_content swiper-container'>
+        <ul class="swiper-wrapper">
+            <li class="swiper-slide"><img src="__IMG__/qizz.png" alt=""></li>
+            <li class="swiper-slide"><img src="__IMG__/qizz.png" alt=""></li>
+            <li class="swiper-slide"><img src="__IMG__/qizz.png" alt=""></li>
+            <li class="swiper-slide"><img src="__IMG__/qizz.png" alt=""></li>
+            <li class='swiper-slide'><img src="__IMG__/banner.png" alt=""></li>
+            <li class="swiper-slide"><img src="__IMG__/qizz.png" alt=""></li>
+            <li class="swiper-slide"><img src="__IMG__/qizz.png" alt=""></li>
+            <li class="swiper-slide"><img src="__IMG__/qizz.png" alt=""></li>
+            <li class="swiper-slide"><img src="__IMG__/qizz.png" alt=""></li>
+            <li class='swiper-slide'><img src="__IMG__/other.png" alt=""></li>
+
+        </ul>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+    </div>
+</div>
+<!-- 同类型企业推荐 -->
+<div class="recommend_info">
+    <div class='recommend__top' >
+        <div class='top_left'>
+            <span class='top_left_title' >同类型企业推荐</span><span class='top_left_eng' >/ RECOMMENDED BY THE SAME TYPE OF ENTERPISE</span>
+        </div>
+        <div class='top_right'>
+                <a href=''><span class='more'>查看更多</span></a>
+        </div>
+    </div>
+    <div class='recommend__content'>
+        <ul>
+            <li >
+                <div class='li_img'>
+
+                    <img src="__IMG__/other.png" alt="">
+                </div>
+                <div class='li_title'>佛山市星光传动机械有限公司</div>
+            </li>
+            <li>
+                <div class='li_img'>
+                        <img src="__IMG__/other.png" alt="">
+                </div>
+                <div class='li_title'>佛山市星光传动机械有限公司</div>
+            </li>
+            <li>
+                <div class='li_img'>
+                        <img src="__IMG__/other.png" alt="">
+                </div>
+                <div class='li_title'>佛山市星光传动机械有限公司</div>
+            </li>
+            <li>
+                <div class='li_img'>
+                        <img src="__IMG__/other.png" alt="">
+                </div>
+                <div class='li_title'>佛山市星光传动机械有限公司</div>
+            </li>
+            <li class='last'>
+                <div class='li_img'>
+                        <img src="__IMG__/other.png" alt="">
+                </div>
+                <div class='li_title'>佛山市星光传动机械有限公司</div>
+            </li>
+
+        </ul>
+          
+    </div>
+</div>
+{/block}
+{block name='script'}
+<script src="__JS__/swiper/swiper-4.4.1.min.js"></script>
+<script>
+    $(function(){
+        //banner 轮播图
+        var swiper1 = new Swiper('#banner_swiper', {
+            autoplay: true,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+         });
+        //图片切换
+        var swiper = new Swiper('#quali_swiper', {
+            slidesPerView: 5,
+            spaceBetween: 5,
+            slidesPerGroup: 5,
+            loop: true,
+            loopFillGroupWithBlank: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    })
+</script>
 {/block}

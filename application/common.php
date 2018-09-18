@@ -74,3 +74,32 @@ function page_array($array = [],$page = 1,$pageSize = 10){
     curl_close($ci);
     return $response;
 }
+/**
+ * 截取字符
+ */
+function cutStr($str, $n=20, $stripTags = true) {
+    if(!$str){
+      return false;
+    }
+    $qian=array(" ","　","\t","\n","\r","_ueditor_page_break_tag_");$hou=array("","","","","","");
+    if ($stripTags) {
+      $strip_str = str_replace($qian,$hou,strip_tags(htmlspecialchars_decode($str)));
+      $r=abslength($strip_str)>$n?'...':'';
+      return mb_substr($strip_str, 0, $n, 'utf-8').$r;
+    } else {
+      $strip_str = str_replace($qian,$hou,htmlspecialchars_decode($str));
+      return mb_substr($strip_str,0,$n,'utf-8');
+    }
+  }
+  function abslength($str) {
+    if(empty($str)){
+        return 0;
+    }
+    if(function_exists('mb_strlen')){
+        return mb_strlen($str,'utf-8');
+    }
+    else {
+        preg_match_all("/./u", $str, $ar);
+        return count($ar[0]);
+    }
+}
