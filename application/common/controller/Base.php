@@ -6,6 +6,7 @@ class Base extends Controller
 {
     //初始化
     protected function initialize(){
+        
         //不抛出 未定义变量错误
         // error_reporting(E_ALL ^ E_NOTICE);
 

@@ -256,7 +256,7 @@ body{
     margin-right: 5px;
     width: 20px;
     height: 20px;
-    vertical-align: middle;
+    margin-bottom: -4px;
 }
 .resource i {
     background: url(../image/icon-addres.png) no-repeat center center;

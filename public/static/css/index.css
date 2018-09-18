@@ -93,6 +93,13 @@
     float: left;
     margin-right: 17px;
     margin-bottom: 17px;
+    cursor: pointer;
+}
+.product_content ul li:hover{
+    border:1px solid #D60000;
+}
+.product_content ul li.active{
+    border:1px solid #D60000;
 }
 .product_content ul li.last{
     margin-right: 0px;
