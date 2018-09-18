@@ -1,6 +1,122 @@
 {extend name='common@base'}
+{block name='style'}
+<link rel="stylesheet" href="__CSS__/category.css">
+<!--<link rel="stylesheet" href="__STATIC__/zTree_v3/css/demo.css" type="text/css">-->
+<link rel="stylesheet" href="__STATIC__/zTree_v3/css/zTreeStyle/zTreeStyle.css" type="text/css">
+<link rel="stylesheet" href="__STATIC__/pagination/myPagination.css" type="text/css">
+<style>
+
+    .ztree ul{
+        background:url(__IMG__/treeline.png) 8px 0 repeat-y;
+    }
+    .ztree li ul.line{
+        background:url(__IMG__/treeline.png) 8px 0 repeat-y;
+    }
+    .ztree ul span{
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+</style>
+{/block}
 {block name='body'}
-        <div style="margin-top: 3px">
-            213
+    <div style="margin-top: 3px; padding-bottom: 24px;background-color: #fff;">
+        <div class="category_fl">
+            <div class="left-content">
+                <div class="left-title">
+                    <div class="left-title-name">产品中心</div>
+                    <div class="left-title-des">PRODUCT CENTER</div>
+                    <div class="left-redLine"></div>
+                </div>
+                <div>
+                    <ul id="menuTree"  class="ztree" style="overflow: hidden; width: 91%"></ul>
+                </div>
+            </div>
         </div>
+        <div class="category_fr">
+            <div class="content-title">
+                <div class="content-title-left">已选条件：共<span style="color: #dc0000; font-weight: bold">1167</span>个结果</div>
+                <div class="content-title-right">
+                    <input type="text" placeholder="请输入产品名称">
+                    <div  class="search-box">
+                        <div style="height: 14px;height: 14px;margin-right: 4px;">
+                            <img src="__IMG__/category-search.png" alt="">
+                        </div>
+                        <div>搜索</div>
+                    </div>
+                </div>
+                <div style="clear: both"></div>
+            </div>
+            <div class="content-middle">
+                <div class="content-middle-left">
+                    <div style="color: #333333">产品列表</div>
+                    <div>
+                        <input type="checkbox">
+                    </div>
+                    <div>含有模型</div>
+                </div>
+                <div class="content-middle-right">
+                    <div class="item active">综合</div>
+                    <div class="item">下载</div>
+                    <div class="item">访问</div>
+                    <div class="item">收藏</div>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            <div class="content-list">
+                {for start="1" end="20"}
+                <div class="content-list-item">
+                    <div class="imageBox">
+                        <div><img src="__IMG__/product.png" alt=""></div>
+                    </div>
+                    <div class="content-list-item-name">BRCF 01系列 22222222222222222222222斜齿轮减速机轮减速机</div>
+                    <div class="content-list-item-info">
+                        <div><img src="__IMG__/view.png" alt=""></div>
+                        <div style="margin-left: 4px">50次</div>
+                        <div style="margin-left: 11px"><img src="__IMG__/download.png" alt=""></div>
+                        <div style="margin-left: 6px">72次</div>
+                    </div>
+                </div>
+                {/for}
+            </div>
+            <div id="pagination" class="pagination" style="float: right; margin-top: 12px;" ></div>
+        </div>
+        <div style="clear: both"></div>
+    </div>
+{/block}
+{block name='script'}
+<script type="text/javascript" src="__STATIC__/zTree_v3/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="__STATIC__/zTree_v3/js/jquery.ztree.core.js"></script>
+<script type="text/javascript" src="__STATIC__/pagination/myPagination.js"></script>
+<!--<script type="text/javascript" src="__STATIC__/zTree_v3/js/jquery.ztree.excheck.js"></script>-->
+<script type="text/javascript">
+    new myPagination({
+        id: 'pagination',
+        curPage: 1, //初始页码
+        pageTotal: 50, //总页数
+        pageAmount: 10, //每页多少条
+        dataTotal: 500, //总共多少条数据
+        pageSize: 5, //可选,分页个数
+        showPageTotalFlag: false, //是否显示数据统计
+        showSkipInputFlag: true, //是否支持跳转
+        getPage: function(page) {
+            //获取当前页数
+            console.log(page);
+        }
+    })
+</script>
+<script type="text/javascript">
+    var setting = {
+        view:{
+            showIcon:false,
+            showLine:true
+        }
+    };
+    var zNodes = [
+        {name:"产品目录", open:true, children:[{name:"BRC系列斜齿轮减速机",open:true, children:[{name:"BRC系列斜齿轮减速机",open:true, children:[{name:"BRC系列斜齿轮减速机",open:true, children:[{name:"BRC系列斜齿轮减速机"},{name:"BRC 01系列 斜齿轮减速机"}]},{name:"BRC 01系列 斜齿轮减速机"}]},{name:"BRC 01系列 斜齿轮减速机"}]},{name:"BRC 01系列 斜齿轮减速机"}]},
+    ];
+    $(document).ready(function(){
+        zTreeObj = $.fn.zTree.init($("#menuTree"), setting, zNodes);
+    });
+</script>
 {/block}
