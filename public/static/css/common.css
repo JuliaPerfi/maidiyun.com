@@ -38,12 +38,139 @@ body{
     font-family:MicrosoftYaHei;
     font-weight:400;
     color:#6C6C6C;
+    
 }
 .login-nav .login-nav-bd-l{
+    position: relative;
     float: left;
 }
 .login-nav .login-nav-bd-r{
     float: right;
+    position: relative;
+}
+.qr-a:hover + .qr{
+    display: block;
+}
+.qr:hover{
+    display: block;
+}
+.qr {
+    position: absolute;
+    height: 110px;
+    left: 155px;
+    background-color: #f5f5f5;
+    border: solid 1px #eee;
+    border-top-width: 0px;
+    z-index: 1001;
+    display: none;
+}
+.site-nav-bd .menu .menu-hd a {
+    float: left;
+    margin-right: 7px;
+    font-size: 12px;
+}
+.qr .qr-bd {
+    position: relative;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    width: 100px;
+    color: #6c6c6c;
+}
+.qr a {
+    margin-right: 0px!important;
+}
+.qr .qr-bd span {
+    display: block;
+    line-height: 20px;
+    height: 20px;
+    margin: 0px auto;
+}
+.qr .qr-bd img {
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: 0px auto 5px;
+}
+.qq_a{
+    width: 70px;
+    display: inline-block;
+    text-align: center;
+    height: 100%;
+}
+.qq_a:hover{
+    background: #fff;
+    color:#DC0000;
+    border-left: 1px solid #EEEEEE;
+    border-right: 1px solid #EEEEEE;
+    box-sizing: border-box;
+}
+.qq_a.active{
+    background: #fff;
+    color:#DC0000;
+    border-left: 1px solid #EEEEEE;
+    border-right: 1px solid #EEEEEE;
+    box-sizing: border-box;
+}
+.qq_a:hover+ .qq_helpers{
+    display: block;
+}
+.qq_helpers:hover {
+    display: block;
+}
+.qq_helpers:hover+ .qq_a{
+    background: #fff;
+    color:#DC0000;
+    border-left: 1px solid #EEEEEE;
+    border-right: 1px solid #EEEEEE;
+    box-sizing: border-box;
+}
+.qq_helpers {
+    width: 130px;
+    display: none;
+    position: absolute;
+    border: 1px solid #EEEEEE;
+    top: 35px;
+    background: #fff;
+    right: 1px;
+    padding-bottom: 5px;
+    z-index: 10000;
+    border-top: none;
+}
+.qq_helpers ul li {
+    line-height: 33px;
+    height: 33px;
+    display: block;
+    border-bottom: 1px dashed #EEEEEE;
+    padding: 5px 5px 0px 5px;
+}
+.qq_helpers a {
+    font-size: 13px!important;
+    margin: 0px!important;
+    width: auto!important;
+
+}
+
+.qq_helpers ul li:hover{
+    background:#F5F5F5;
+}
+.qq_helpers a:hover{
+    margin:0px!important;
+    font-size:13px!important;
+    color: #DC0000;
+}
+.qq_helpers .qqbgSpan {
+    display: block;
+    float: left;
+    width: 29px;
+    height: 30px;
+    background-image: url(../image/qqkefu.png);
+    background-repeat: no-repeat;
+    background-size: 90px;
+    background-position: -6px -27px;
+}
+.qq_helpers .qqphone {
+    background-position: -6px -67px;
 }
 .header-nav{
     width: 100%;

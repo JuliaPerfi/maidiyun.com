@@ -19,7 +19,7 @@ class Base extends Controller
             $MDT = $http_host[0];
         }
         $this->MDT= $MDT;
-
+        
         //api域名读取
         if(config('config.TEST_MODE') == 1){
             $MDAPI = config('config.MdAppUrlTest');
