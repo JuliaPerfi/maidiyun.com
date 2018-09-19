@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="__STATIC__/zTree_v3/css/zTreeStyle/zTreeStyle.css" type="text/css">
 <link rel="stylesheet" href="__STATIC__/pagination/myPagination.css" type="text/css">
 <style>
-
+    .tree_selected{color:red !important;}
     .ztree ul{
         background:url(__IMG__/treeline.png) 8px 0 repeat-y;
     }
@@ -17,10 +17,17 @@
         text-overflow: ellipsis;
         overflow: hidden;
     }
+    .ztree li a span{
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 140px;
+    }
 </style>
 {/block}
 {block name='body'}
-    <div style="margin-top: 3px; padding-bottom: 24px;background-color: #fff;">
+    <div style="margin-top: 3px;margin-bottom: 3px padding-bottom: 21px;background-color: #fff;">
         <div class="category_fl">
             <div class="left-content">
                 <div class="left-title">
@@ -29,7 +36,7 @@
                     <div class="left-redLine"></div>
                 </div>
                 <div>
-                    <ul id="menuTree"  class="ztree" style="overflow: hidden; width: 91%"></ul>
+                    <ul id="menuTree"  class="ztree" style="overflow: hidden; width: 91%;height: inherit"></ul>
                 </div>
             </div>
         </div>
@@ -67,7 +74,7 @@
                 {for start="1" end="20"}
                 <div class="content-list-item">
                     <div class="imageBox">
-                        <div><img src="__IMG__/product.png" alt=""></div>
+                        <div><a target="_blank" href="http://item.maidiyun.com/?id=171107000053"><img src="__IMG__/product.png" alt=""></a></div>
                     </div>
                     <div class="content-list-item-name">BRCF 01系列 22222222222222222222222斜齿轮减速机轮减速机</div>
                     <div class="content-list-item-info">
@@ -87,8 +94,16 @@
 {block name='script'}
 <script type="text/javascript" src="__STATIC__/zTree_v3/js/jquery-1.4.4.min.js"></script>
 <script type="text/javascript" src="__STATIC__/zTree_v3/js/jquery.ztree.core.js"></script>
+<script type="text/javascript" src="__STATIC__/zTree_v3/js/jquery.ztree.excheck.js"></script>
 <script type="text/javascript" src="__STATIC__/pagination/myPagination.js"></script>
 <!--<script type="text/javascript" src="__STATIC__/zTree_v3/js/jquery.ztree.excheck.js"></script>-->
+<script type="text/javascript">
+    //获取右侧动态高度  赋值给左侧
+    $(function () {
+        var h = parseInt($(".category_fr").get(0).offsetHeight);
+        $(".left-content").css("height", (h)+"px")
+    });
+</script>
 <script type="text/javascript">
     new myPagination({
         id: 'pagination',
@@ -109,7 +124,17 @@
     var setting = {
         view:{
             showIcon:false,
-            showLine:true
+            showLine:true,
+            dblClickExpand:false,
+            fontCss: setFontCss,
+        },
+        data:{
+            simpleData:{
+                enable:true
+            }
+        },
+        callback:{
+            onClick: onClick
         }
     };
     var zNodes = [
@@ -117,6 +142,33 @@
     ];
     $(document).ready(function(){
         zTreeObj = $.fn.zTree.init($("#menuTree"), setting, zNodes);
+        var tree = $.fn.zTree.getZTreeObj("menuTree");
+        var node = tree.getNodeByParam("name", "产品目录", null);
+        console.log(node)
+        //初次加载选中顶级节点
+        if (zNodes.length > 0) {
+            $("#" + node.tId + "_span").addClass("tree_selected");
+        }
+        tree.expandNode(node, true, false, true, false);
     });
+    function setFontCss(treeId, treeNode) {
+        return treeNode.level == 0 ? {fontsize:"16px"} : {};
+    }
+    function onClick(e,treeId, treeNode) {
+        $(".ztree .tree_selected").removeClass("tree_selected");
+        cancelParentNodeChecked(treeNode);
+        $("#" + treeNode.tId + "_span").addClass("tree_selected");
+        var zTree = $.fn.zTree.getZTreeObj("menuTree");
+        zTree.expandNode(treeNode);
+    }
+    //选中子节点递归选中父类节点
+    function cancelParentNodeChecked(node){
+        zTree = $.fn.zTree.getZTreeObj("menuTree");
+        if(node.getParentNode()){
+            $("#" + node.getParentNode().tId + "_span").addClass("tree_selected")
+            zTree.checkNode(node.getParentNode(),true,false);
+            cancelParentNodeChecked(node.getParentNode());
+        }
+    }
 </script>
 {/block}

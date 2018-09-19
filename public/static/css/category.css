@@ -114,6 +114,7 @@
     align-items: center;
     justify-content: space-between;
     width: 160px;
+    cursor:pointer;
 }
 .content-middle-right{
     width: 205px;
@@ -177,7 +178,7 @@
     width: 140px;
     height:31px;
     font-size:14px;
-    line-height: 15px;
+    line-height: 16px;
     font-family:MicrosoftYaHei;
     font-weight:400;
     overflow:hidden;
